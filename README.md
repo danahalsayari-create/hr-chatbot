@@ -192,21 +192,23 @@ Results Displayed in Streamlit
 ---
 
 # Project Structure
-hr-ai-chatbot
-│
-├── app.py
-├── core.py
-├── analytics.py
-│
-├── data
-│ └── WA_Fn-UseC_-HR-Employee-Attrition.csv
-│
-├── database
-│ └── hr.db
-│
-├── environment.yml
-└── README.md
 
+```
+hr-ai-chatbot/
+│
+├── app.py             
+├── core.py             
+├── analytics.py        
+│
+├── data/
+│   └── WA_Fn-UseC_-HR-Employee-Attrition.csv
+│
+├── database/
+│   └── hr.db
+│
+├── environment.yml     
+└── README.md
+```
 
 
 ---
@@ -235,7 +237,24 @@ streamlit run app.py
 - Large Language Models (LLMs)
 
 ---
+# Model Performance Comparison
 
+This project supports two model modes: an API-based model and a local model.  
+A simple comparison was conducted to evaluate the differences in speed and response quality.
+
+| Model | Type | Speed | Accuracy |
+|------|------|------|------|
+| Groq Llama | API | Very Fast | High |
+| prem-1B-SQL | Local | Moderate | Good |
+
+### Observations
+
+The API-based model (Groq) produced responses significantly faster because inference is performed on optimized cloud hardware.
+
+The local model provides more flexibility and works offline, but responses are slower due to limited local computing resources.
+
+Overall, the API model performed better in terms of speed, while the local model demonstrates the feasibility of running AI models locally.
+---
 
 # Author
 
