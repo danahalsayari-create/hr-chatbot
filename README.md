@@ -90,8 +90,7 @@ prem-research/prem-1B-SQL
 
 Advantages:
 
-- Works offline  
-- Fully local AI pipeline  
+- Works offline    
 
 ---
 
@@ -240,5 +239,4 @@ streamlit run app.py
 
 # Author
 
-Danah Al-Sayari  
-Software Engineering Student
+Danah AlSayari
