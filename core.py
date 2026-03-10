@@ -17,7 +17,7 @@ def question_to_sql( model_mode: str, settings: dict,db_path: str,table: str,
         api_key = settings.get("GROQ_API_KEY")
         model_name = settings.get("GROQ_MODEL")
         if not api_key:
-            return "NOT_SQL"
+            return "there is no api key"
 
         raw = API_sql_generator(api_key, model_name, prompt, userQ) or ""
         sql = extract_sql_query(raw)
@@ -28,7 +28,7 @@ def question_to_sql( model_mode: str, settings: dict,db_path: str,table: str,
 
     # Local mode 
     if local_bundle is None:
-        return "NOT_SQL"
+        return "there is no local model"
 
     tok, model, device = local_bundle
     raw = local_generate(tok, model, device, prompt, userQ, max_new_tokens=80)
@@ -137,6 +137,7 @@ def run_sql(db_path: str, sql: str, params=()):
         cols = [d[0] for d in cur.description] 
         rows = cur.fetchall()
     return rows, cols
+
 
 
 
