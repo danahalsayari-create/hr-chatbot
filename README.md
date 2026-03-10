@@ -179,6 +179,7 @@ Below is a demonstration of the chatbot answering questions about the HR dataset
 
 # System Architecture
 
+```
 User Question
 ↓
 Large Language Model (API or Local)
@@ -188,7 +189,7 @@ Text-to-SQL Generation
 SQLite Database Query
 ↓
 Results Displayed in Streamlit
-
+```
 ---
 
 # Project Structure
