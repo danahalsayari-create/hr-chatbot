@@ -126,7 +126,7 @@ else:
 
         
         msg = {"role": "assistant", "content": ans}
-        if df is not None:
+        if df is not None and (len(df.columns) != 1 or len(df) != 1):
                 msg["table"] = {
                     "data": df.to_dict(orient="records"),
                     "columns": list(df.columns),
@@ -134,4 +134,5 @@ else:
         st.session_state.history.append(msg)   
         
         
+
 
